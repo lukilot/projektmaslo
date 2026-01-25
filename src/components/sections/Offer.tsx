@@ -58,7 +58,8 @@ export default function Offer() {
                 >
                     <h2 className={styles.title}>Oferta</h2>
                     <p className={styles.intro}>
-                        Wypieki tworzone z dbałością o smak, jakość i estetykę. Poznaj nasze flagowe desery oraz sezonowe propozycje.
+                        Wypieki tworzone z dbałością o smak, jakość i estetykę.<br />
+                        Poznaj moje flagowe desery oraz sezonowe propozycje.
                     </p>
                 </motion.div>
 
