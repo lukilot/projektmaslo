@@ -65,7 +65,14 @@ export default function Contact() {
 
                             <div className={styles.group}>
                                 <label htmlFor="date" className={styles.label}>Data odbioru</label>
-                                <input type="date" id="date" name="date" required className={styles.input} />
+                                <input
+                                    type="date"
+                                    id="date"
+                                    name="date"
+                                    required
+                                    className={styles.input}
+                                    min={new Date().toISOString().split('T')[0]}
+                                />
                             </div>
 
                             <div className={styles.group}>
