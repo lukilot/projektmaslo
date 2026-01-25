@@ -109,7 +109,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2 }}
                 >
-                    <h1 className={styles.slogan}>MASŁO. Z MASŁEM.<br /> NA MAŚLE.</h1>
+                    <h1 className={styles.slogan}>MASŁO.<br /> Z MASŁEM.<br /> NA MAŚLE.</h1>
                 </motion.div>
 
                 <motion.div
