@@ -15,7 +15,7 @@ export default function About() {
                     transition={{ duration: 0.6 }}
                 >
                     <Image
-                        src="/images/julka.png"
+                        src="/images/About.jpeg"
                         alt="Julka w kuchni - Projekt Masło"
                         fill
                         className={styles.image}

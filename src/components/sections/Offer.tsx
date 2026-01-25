@@ -9,19 +9,19 @@ const mainGallery = [
         id: 'sernik',
         name: 'Klasyczne wypieki',
         description: 'sernik baskijski / sernik z białej czekolady / brownie / miodownik / karpatka / napoleonka',
-        image: '/images/sernik.png',
+        image: '/images/klasyki_gen.png',
     },
     {
         id: 'tarty-sezonowe',
         name: 'Tarty sezonowe',
         description: 'cytrynowa / pistacjowa / biała czekolada / orzech laskowy',
-        image: '/images/pistachio_tart.png',
+        image: '/images/tarty_gen.png',
     },
     {
         id: 'bezy',
         name: 'Bezy',
         description: 'klasyczna / pistacjowa',
-        image: '/images/meringue_minimal.png',
+        image: '/images/beza_gen.png',
     },
 ];
 
@@ -30,19 +30,19 @@ const specialties = [
         id: 'drozdzowe',
         name: 'Drożdżowe',
         description: 'Miękkie, maślane drożdżowe przygotowywane tego samego dnia:\nmalinianka / cynamonka / jagodzianka (sezonowo)',
-        image: '/images/drozdzowe.png',
+        image: '/images/drozdzowe_gen.png',
     },
     {
         id: 'solo',
         name: 'Solo',
         description: 'Indywidualne porcje deserów premium, takie jak ptysie, tiramisu i wiele innych.',
-        image: '/images/solo.png',
+        image: '/images/solo_gen.png',
     },
     {
         id: 'konfitury',
         name: 'Konfitury',
         description: 'Autorskie konfitury i pasty orzechowe z naturalnych składników:\nkonfitura pomarańcza & wanilia / powidła korzenna śliwka / pasta z prażonych pistacji',
-        image: '/images/konfitury_v2.png',
+        image: '/images/konfitury_gen.png',
     },
 ];
 
@@ -161,7 +161,7 @@ export default function Offer() {
                     </div>
                     <div className={styles.eventsImageWrapper}>
                         <Image
-                            src="/images/events.png"
+                            src="/images/events.jpeg"
                             alt="Słodkie Stoły i Wydarzenia"
                             fill
                             className={styles.eventsImage}
