@@ -1,27 +1,17 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --color-bg-main: #F8F7F2;
+  --color-text-main: #5C4434;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --color-butter-beige: #EFE3C7;
+  --color-caramel: #C9A26B;
+  --color-cocoa-soft: #8A6B55;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+  --color-raspberry-soft: #B5535E;
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-border-light: #E6DAC5;
+  --color-shadow-soft: rgba(92, 68, 52, 0.12);
+
+  --font-family-main: var(--font-league-spartan);
 }
 
 * {
@@ -30,13 +20,29 @@ body {
   margin: 0;
 }
 
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  font-family: var(--font-family-main), sans-serif;
+  scroll-behavior: smooth;
+  /* Remove overflow-x: hidden from here as it can break position: sticky in some contexts */
+}
+
+/* Apply overflow handling to a wrapper if strictly needed, or ensure body doesn't implicitly clip */
+body {
+  overflow-x: clip;
+  /* Modern alternative to hidden that often plays nicer with sticky */
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+button {
+  font-family: inherit;
 }
