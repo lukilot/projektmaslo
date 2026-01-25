@@ -28,8 +28,8 @@
     position: relative;
     z-index: 10;
     text-align: center;
-    margin-bottom: 10vh;
-    /* Leakko wyżej */
+    margin-bottom: 40vh;
+    /* Przesunięte wyżej, aby nie kolidowało z animacją */
 }
 
 .slogan {
