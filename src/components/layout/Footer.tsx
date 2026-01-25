@@ -6,8 +6,8 @@ export default function Footer() {
         <footer className={styles.footer}>
             <div className={styles.container}>
                 <div className={styles.links}>
-                    <Link href="#" className={styles.link}>Regulamin</Link>
-                    <Link href="#" className={styles.link}>Polityka prywatności</Link>
+                    <Link href="/regulamin" className={styles.link}>Regulamin</Link>
+                    <Link href="/polityka-prywatnosci" className={styles.link}>Polityka prywatności</Link>
                     <a href="https://www.instagram.com/projekt_maslo/" target="_blank" rel="noopener noreferrer" className={styles.link}>Instagram</a>
                 </div>
                 <div className={styles.copy}>
