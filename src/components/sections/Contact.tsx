@@ -19,7 +19,7 @@ export default function Contact() {
     return (
         <section id="kontakt" className={styles.section}>
             <div className={styles.container}>
-                <h2 className={styles.title}>Zamów domowe wypieki</h2>
+                <h2 className={styles.title}>Zamów lub zapytaj o wypieki</h2>
 
                 {status === 'success' ? (
                     <div className={styles.success}>

@@ -21,25 +21,36 @@ export default function Hero() {
     const scaleText = useTransform(scrollYProgress, [0, 0.4], [1, 0.9]);
 
     useEffect(() => {
+        let isMobile = window.innerWidth < 768; // Initial check
         const loadedImages: HTMLImageElement[] = [];
 
-        // Efficiently preload - allow browser to manage queue, but prioritize early frames?
-        // Browser prioritizes implicitly.
-        for (let i = 1; i <= frameCount; i++) {
-            const img = new Image();
-            img.src = `/hero-sequence/ezgif-frame-${i.toString().padStart(3, '0')}.jpg`;
-            img.onload = () => {
-                if (i === 1) { // Ensure first frame draws as soon as it's ready
-                    const canvas = canvasRef.current;
-                    if (canvas) draw(canvas, img);
-                }
-            };
-            loadedImages[i] = img;
-        }
-        setImages(loadedImages);
-        setIsLoaded(true);
+        const loadImages = () => {
+            const basePath = isMobile ? '/hero-sequence-mobile' : '/hero-sequence';
+            for (let i = 1; i <= frameCount; i++) {
+                const img = new Image();
+                img.src = `${basePath}/ezgif-frame-${i.toString().padStart(3, '0')}.jpg`;
+                img.onload = () => {
+                    if (i === 1) {
+                        const canvas = canvasRef.current;
+                        if (canvas) draw(canvas, img);
+                    }
+                };
+                loadedImages[i] = img;
+            }
+            setImages(loadedImages);
+            setIsLoaded(true);
+        };
+
+        loadImages();
 
         const handleResize = () => {
+            const currentIsMobile = window.innerWidth < 768;
+            if (currentIsMobile !== isMobile) {
+                isMobile = currentIsMobile;
+                setIsLoaded(false);
+                loadImages(); // Reload if breakpoint changes
+            }
+
             const canvas = canvasRef.current;
             const latest = smoothProgress.get();
             const animationProgress = Math.min(1, latest / 0.85);
@@ -97,7 +108,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2 }}
                 >
-                    <h1 className={styles.slogan}>Od masła,<br /> po ostatni kęs.</h1>
+                    <h1 className={styles.slogan}>MASŁO. Z MASŁEM.<br /> NA MAŚLE.</h1>
                 </motion.div>
             </div>
         </div>

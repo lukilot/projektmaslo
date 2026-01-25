@@ -32,15 +32,20 @@ export default function Header() {
                 transition={{ duration: 0.35, ease: "easeInOut" }}
             >
                 <div className={styles.container}>
-                    <Link href="/" className={styles.logo}>
-                        Projekt Masło
-                    </Link>
+                    <div className={styles.brandContainer}>
+                        <Link href="/" className={styles.logo}>
+                            Projekt Masło
+                        </Link>
+                        <span className={styles.tagline}>
+                            Rzemieślnicze wypieki na zamówienie.
+                        </span>
+                    </div>
 
                     <nav className={styles.nav}>
                         <Link href="#oferta">Oferta</Link>
                         <Link href="#o-mnie">O mnie</Link>
                         <Link href="#kontakt">Kontakt</Link>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <a href="https://www.instagram.com/projekt_maslo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </a>
                     </nav>
@@ -69,7 +74,7 @@ export default function Header() {
                         <Link href="#oferta" className={styles.mobileLink} onClick={() => setMobileMenuOpen(false)}>Oferta</Link>
                         <Link href="#o-mnie" className={styles.mobileLink} onClick={() => setMobileMenuOpen(false)}>O mnie</Link>
                         <Link href="#kontakt" className={styles.mobileLink} onClick={() => setMobileMenuOpen(false)}>Kontakt</Link>
-                        <a href="https://instagram.com" className={styles.mobileLink} target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.instagram.com/projekt_maslo/" className={styles.mobileLink} target="_blank" rel="noopener noreferrer">Instagram</a>
                     </motion.div>
                 )}
             </AnimatePresence>

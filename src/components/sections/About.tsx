@@ -30,14 +30,15 @@ export default function About() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                    <h2 className={styles.title}>Domowa cukiernia Projekt Masło</h2>
+                    <h2 className={styles.title}>Projekt Masło — domowa cukiernia rzemieślnicza</h2>
                     <p className={styles.text}>
-                        Mam na imię Julka i od zawsze piekę domowe wypieki z sercem i dbałością o każdy detal.
-                        Projekt Masło powstał z miłości do naturalnych składników, estetyki i autentycznego smaku.
+                        Mam na imię Julka.<br />
+                        Od zawsze piekę z sercem i dbałością o każdy detal.
+                        Projekt Masło powstał z miłości do naturalnych składników, prostych receptur i autentycznego smaku.
                     </p>
                     <p className={styles.text}>
-                        Po latach pracy w korporacji postawiłam na marzenia i stworzyłam cukiernię, w której królują serniki, tarty i ręcznie robione słodkości.
-                        Dziś piekę na zamówienie dla klientów, którzy cenią jakość, świeżość i niepowtarzalny smak.
+                        Po latach pracy w korporacji postawiłam na marzenia i stworzyłam miejsce, w którym jakość dopełnia się z estetyką.
+                        Dziś piekę na zamówienie dla tych, którzy chcą wracać do smaków dzieciństwa — bez kompromisów i bez skrótów.
                     </p>
                 </motion.div>
             </div>

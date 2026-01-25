@@ -24,12 +24,40 @@
     align-items: center;
 }
 
+.brandContainer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .logo {
     font-family: var(--font-league-spartan);
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--color-text-main);
     letter-spacing: -0.02em;
+    flex-shrink: 0;
+}
+
+.tagline {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+    opacity: 0.8;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.tagline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 20px;
+    background-color: var(--color-caramel);
+    opacity: 0.3;
 }
 
 .nav {
@@ -58,6 +86,10 @@
 }
 
 @media (max-width: 768px) {
+    .tagline {
+        display: none;
+    }
+
     .nav {
         display: none;
     }

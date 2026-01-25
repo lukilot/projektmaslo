@@ -4,31 +4,46 @@ import { motion } from 'framer-motion';
 import Button from '../ui/Button'; // Assuming I reuse the button I made in plan step
 import styles from './Offer.module.css';
 
-const classics = [
+const mainGallery = [
     {
         id: 'sernik',
-        name: 'Sernik Królewski',
-        description: 'Kremowy, gęsty sernik pieczony według rodzinnej receptury — idealny na każdą okazję.',
+        name: 'Klasyczne wypieki',
+        description: 'sernik baskijski / sernik z białej czekolady / brownie / miodownik / karpatka / napoleonka',
         image: '/images/sernik.png',
     },
     {
-        id: 'brownie',
-        name: 'Nasze Brownie',
-        description: 'Intensywnie czekoladowe brownie z miękkim środkiem i chrupiącą skórką.',
-        image: '/images/brownie.png',
+        id: 'tarty-sezonowe',
+        name: 'Tarty sezonowe',
+        description: 'cytrynowa / pistacjowa / biała czekolada / orzech laskowy',
+        image: '/images/pistachio_tart.png',
     },
     {
-        id: 'tarty',
-        name: 'Tarty Sezonowe',
-        description: 'Kruche maślane tarty z sezonowymi owocami i domowym kremem.',
-        image: '/images/tart.png',
+        id: 'bezy',
+        name: 'Bezy',
+        description: 'klasyczna / pistacjowa',
+        image: '/images/meringue_minimal.png',
     },
 ];
 
 const specialties = [
-    { name: 'Drożdżowe', desc: 'Puszyste wypieki z maślaną kruszonką' },
-    { name: 'Solo', desc: 'Minimalistyczne jednosmakowe ciasta premium' },
-    { name: 'Konfitury', desc: 'Rustykalne wypieki z domowymi przetworami' },
+    {
+        id: 'drozdzowe',
+        name: 'Drożdżowe',
+        description: 'Miękkie, maślane drożdżowe przygotowywane tego samego dnia.\n malinianka / cynamonka / jagodzianka (sezonowo)',
+        image: '/images/drozdzowe.png',
+    },
+    {
+        id: 'solo',
+        name: 'Solo',
+        description: 'Indywidualne porcje deserów premium, takie jak ptysie, tiramisu i wiele innych.',
+        image: '/images/solo.png',
+    },
+    {
+        id: 'konfitury',
+        name: 'Konfitury',
+        description: 'Autorskie konfitury i pasty orzechowe z naturalnych składników.\n konfitura pomarańcza&wanilia / powidła korzenna śliwka / pasta z prażonych pistacji',
+        image: '/images/konfitury_v2.png',
+    },
 ];
 
 export default function Offer() {
@@ -41,45 +56,90 @@ export default function Offer() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className={styles.title}>Nasze Klasyki</h2>
+                    <h2 className={styles.title}>Nasza Oferta</h2>
                     <p className={styles.intro}>
-                        Ręcznie pieczone ciasta domowe tworzone z naturalnych składników, według tradycyjnych receptur.
+                        Wypieki tworzone z dbałością o smak, jakość i estetykę. Poznaj nasze flagowe desery oraz sezonowe propozycje.
                     </p>
                 </motion.div>
 
-                <div className={styles.grid}>
-                    {classics.map((item, index) => (
-                        <motion.div
-                            key={item.id}
-                            className={styles.card}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.2 }}
-                        >
-                            <div className={styles.imageWrapper}>
-                                <Image
-                                    src={item.image}
-                                    alt={item.name}
-                                    fill
-                                    className={styles.image}
-                                    sizes="(max-width: 768px) 100vw, 33vw"
-                                />
+                {/* Main Gallery Section */}
+                <div className={styles.categoryBlock}>
+                    <div className={styles.grid}>
+                        {mainGallery.map((item, index) => (
+                            <motion.div
+                                key={item.id}
+                                className={styles.card}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                            >
+                                <div className={styles.imageWrapper}>
+                                    <Image
+                                        src={item.image}
+                                        alt={item.name}
+                                        fill
+                                        className={styles.image}
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                    />
+                                </div>
+                                <h3 className={styles.cardTitle}>{item.name}</h3>
+                                <p className={styles.cardDesc}>{item.description}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    <motion.div
+                        className={styles.sizesInfo}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                    >
+                        <span className={styles.sizesTitle}>Dostępne rozmiary:</span>
+                        <div className={styles.sizesFlex}>
+                            <div className={styles.sizeItem}>
+                                <span className={styles.diameter}>24 cm</span>
+                                <span className={styles.portions}>8 - 10 porcji</span>
                             </div>
-                            <h3 className={styles.cardTitle}>{item.name}</h3>
-                            <p className={styles.cardDesc}>{item.description}</p>
-                        </motion.div>
-                    ))}
+                            <div className={styles.sizeSeparator} />
+                            <div className={styles.sizeItem}>
+                                <span className={styles.diameter}>26 cm</span>
+                                <span className={styles.portions}>10 - 12 porcji</span>
+                            </div>
+                            <div className={styles.sizeSeparator} />
+                            <div className={styles.sizeItem}>
+                                <span className={styles.diameter}>28 cm</span>
+                                <span className={styles.portions}>12 - 14 porcji</span>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
 
-                <div className={styles.specialtiesWrapper}>
-                    <h3 className={styles.subTitle}>Specjalności</h3>
-                    <div className={styles.specialtiesGrid}>
-                        {specialties.map((item, i) => (
-                            <div key={i} className={styles.specialtyItem}>
-                                <h4>{item.name}</h4>
-                                <p>{item.desc}</p>
-                            </div>
+                {/* Specialties Section */}
+                <div className={styles.specialtiesBlock}>
+                    <h3 className={styles.groupTitle}>Codzienne Rytuały & Dodatki</h3>
+                    <div className={styles.grid}>
+                        {specialties.map((item, index) => (
+                            <motion.div
+                                key={item.id}
+                                className={styles.card}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                            >
+                                <div className={styles.imageWrapper}>
+                                    <Image
+                                        src={item.image}
+                                        alt={item.name}
+                                        fill
+                                        className={styles.image}
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                    />
+                                </div>
+                                <h3 className={styles.cardTitle}>{item.name}</h3>
+                                <p className={styles.cardDesc}>{item.description}</p>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
@@ -92,7 +152,7 @@ export default function Offer() {
                 >
                     <h3 className={styles.eventsTitle}>Słodkie Stoły i Wydarzenia</h3>
                     <p className={styles.eventsText}>
-                        Tworzymy słodkie stoły na wesela, urodziny i eventy firmowe — pełne ręcznie robionych deserów i eleganckiej prezentacji.
+                        Indywidualne kompozycje wypieków na wesela, urodziny i eventy firmowe - dopasowane do okazji, liczby gości i preferencji smakowych.
                     </p>
                     <Button onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}>
                         Skontaktuj się

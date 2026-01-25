@@ -8,7 +8,7 @@ export default function Footer() {
                 <div className={styles.links}>
                     <Link href="#" className={styles.link}>Regulamin</Link>
                     <Link href="#" className={styles.link}>Polityka prywatności</Link>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.link}>Instagram</a>
+                    <a href="https://www.instagram.com/projekt_maslo/" target="_blank" rel="noopener noreferrer" className={styles.link}>Instagram</a>
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.link}>Facebook</a>
                 </div>
                 <div className={styles.copy}>
