@@ -14,7 +14,7 @@ const mainGallery = [
     {
         id: 'tarty-sezonowe',
         name: 'Tarty sezonowe',
-        description: 'cytrynowa / pistacjowa / biała czekolada / orzech laskowy',
+        description: 'cytryna / pistacja / biała czekolada / orzech laskowy',
         image: '/images/tarty_gen.png',
     },
     {
@@ -29,7 +29,7 @@ const specialties = [
     {
         id: 'drozdzowe',
         name: 'Drożdżowe',
-        description: 'Miękkie, maślane drożdżowe przygotowywane tego samego dnia:\nmalinianka / cynamonka / jagodzianka (sezonowo)',
+        description: 'Szykowane codziennie z rana by były zawsze miękkie i niesamowicie maślane, a świeża kruszonka to mój sekret.\nmalinianka / cynamonka / jagodzianka (sezonowo)',
         image: '/images/drozdzowe_gen.png',
     },
     {
