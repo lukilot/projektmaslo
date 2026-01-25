@@ -9,7 +9,6 @@ export default function Footer() {
                     <Link href="#" className={styles.link}>Regulamin</Link>
                     <Link href="#" className={styles.link}>Polityka prywatności</Link>
                     <a href="https://www.instagram.com/projekt_maslo/" target="_blank" rel="noopener noreferrer" className={styles.link}>Instagram</a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.link}>Facebook</a>
                 </div>
                 <div className={styles.copy}>
                     &copy; {new Date().getFullYear()} Projekt Masło. Wszelkie prawa zastrzeżone.

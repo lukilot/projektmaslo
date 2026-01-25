@@ -37,7 +37,7 @@ export default function Header() {
                             Projekt Masło
                         </Link>
                         <span className={styles.tagline}>
-                            Rzemieślnicze wypieki na zamówienie.
+                            Rzemieślnicze wypieki na zamówienie
                         </span>
                     </div>
 

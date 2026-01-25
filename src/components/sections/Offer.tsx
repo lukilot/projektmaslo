@@ -29,7 +29,7 @@ const specialties = [
     {
         id: 'drozdzowe',
         name: 'Drożdżowe',
-        description: 'Miękkie, maślane drożdżowe przygotowywane tego samego dnia.\n malinianka / cynamonka / jagodzianka (sezonowo)',
+        description: 'Miękkie, maślane drożdżowe przygotowywane tego samego dnia:\nmalinianka / cynamonka / jagodzianka (sezonowo)',
         image: '/images/drozdzowe.png',
     },
     {
@@ -41,7 +41,7 @@ const specialties = [
     {
         id: 'konfitury',
         name: 'Konfitury',
-        description: 'Autorskie konfitury i pasty orzechowe z naturalnych składników.\n konfitura pomarańcza&wanilia / powidła korzenna śliwka / pasta z prażonych pistacji',
+        description: 'Autorskie konfitury i pasty orzechowe z naturalnych składników:\nkonfitura pomarańcza & wanilia / powidła korzenna śliwka / pasta z prażonych pistacji',
         image: '/images/konfitury_v2.png',
     },
 ];
@@ -56,7 +56,7 @@ export default function Offer() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className={styles.title}>Nasza Oferta</h2>
+                    <h2 className={styles.title}>Oferta</h2>
                     <p className={styles.intro}>
                         Wypieki tworzone z dbałością o smak, jakość i estetykę. Poznaj nasze flagowe desery oraz sezonowe propozycje.
                     </p>
@@ -146,17 +146,28 @@ export default function Offer() {
 
                 <motion.div
                     className={styles.events}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h3 className={styles.eventsTitle}>Słodkie Stoły i Wydarzenia</h3>
-                    <p className={styles.eventsText}>
-                        Indywidualne kompozycje wypieków na wesela, urodziny i eventy firmowe - dopasowane do okazji, liczby gości i preferencji smakowych.
-                    </p>
-                    <Button onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}>
-                        Skontaktuj się
-                    </Button>
+                    <div className={styles.eventsContent}>
+                        <h3 className={styles.eventsTitle}>Słodkie Stoły i Wydarzenia</h3>
+                        <p className={styles.eventsText}>
+                            Indywidualne kompozycje wypieków na wesela, urodziny i eventy firmowe - dopasowane do okazji, liczby gości i preferencji smakowych.
+                        </p>
+                        <Button onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}>
+                            Skontaktuj się
+                        </Button>
+                    </div>
+                    <div className={styles.eventsImageWrapper}>
+                        <Image
+                            src="/images/events.png"
+                            alt="Słodkie Stoły i Wydarzenia"
+                            fill
+                            className={styles.eventsImage}
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                    </div>
                 </motion.div>
             </div>
         </section>

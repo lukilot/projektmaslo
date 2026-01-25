@@ -32,7 +32,7 @@
 }
 
 .categoryBlock {
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
 }
 
 .grid {
@@ -79,28 +79,30 @@
     color: var(--color-cocoa-soft);
     line-height: 1.6;
     font-size: 1.05rem;
+    white-space: pre-line;
 }
 
 .sizesInfo {
     text-align: center;
-    margin: 2rem auto 0;
-    padding: 3rem;
-    background-color: var(--color-butter-beige);
-    border-radius: 12px;
-    max-width: 800px;
+    margin: 4rem auto 0;
+    padding: 2.5rem 1rem;
+    background-color: transparent;
+    border-top: 1px solid var(--color-border-light);
+    border-bottom: 1px solid var(--color-border-light);
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-left: 4px solid var(--color-caramel);
 }
 
 .sizesTitle {
     font-family: var(--font-league-spartan);
     font-weight: 600;
-    font-size: 1.35rem;
-    margin-bottom: 2.5rem;
-    color: var(--color-text-main);
-    letter-spacing: -0.01em;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-cocoa-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
 }
 
 .sizesFlex {
@@ -120,9 +122,9 @@
 
 .diameter {
     font-family: var(--font-league-spartan);
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--color-caramel);
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--color-text-main);
 }
 
 .portions {
@@ -138,9 +140,9 @@
 }
 
 .specialtiesBlock {
-    margin-top: 4rem;
-    padding-top: 6rem;
-    border-top: 1px solid rgba(94, 60, 41, 0.08);
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: none;
 }
 
 .groupTitle {
@@ -197,22 +199,69 @@
 }
 
 .events {
+    display: flex;
     background-color: var(--color-butter-beige);
-    padding: 4rem 2rem;
-    border-radius: 8px;
-    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 6rem;
+    align-items: stretch;
+}
+
+.eventsImageWrapper {
+    flex: 1.2;
+    position: relative;
+    min-height: 450px;
+}
+
+.eventsImage {
+    object-fit: cover;
+}
+
+.eventsContent {
+    flex: 1;
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .eventsTitle {
     font-family: var(--font-league-spartan);
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
     color: var(--color-text-main);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
 }
 
 .eventsText {
-    max-width: 600px;
-    margin: 0 auto 2rem;
+    max-width: 100%;
+    margin: 0 0 3rem 0;
     color: var(--color-text-main);
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 968px) {
+    .events {
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+
+    .eventsImageWrapper {
+        min-height: 350px;
+    }
+
+    .eventsContent {
+        padding: 3rem 2rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .eventsTitle {
+        font-size: 1.8rem;
+    }
 }

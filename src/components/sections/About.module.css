@@ -34,9 +34,17 @@
 
 .title {
     font-family: var(--font-league-spartan);
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 2.75rem;
+    font-weight: 700;
     color: var(--color-text-main);
+    line-height: 1.1;
+}
+
+.titleTagline {
+    display: block;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-top: 0.5rem;
 }
 
 .text {

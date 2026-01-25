@@ -30,7 +30,10 @@ export default function About() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                    <h2 className={styles.title}>Projekt Masło — domowa cukiernia rzemieślnicza</h2>
+                    <h2 className={styles.title}>
+                        Projekt Masło<br />
+                        <span className={styles.titleTagline}>Domowa cukiernia rzemieślnicza.</span>
+                    </h2>
                     <p className={styles.text}>
                         Mam na imię Julka.<br />
                         Od zawsze piekę z sercem i dbałością o każdy detal.

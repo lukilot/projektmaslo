@@ -19,6 +19,7 @@ export default function Hero() {
     const smoothProgress = useSpring(scrollYProgress, { mass: 0.1, stiffness: 100, damping: 20 });
     const opacityText = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
     const scaleText = useTransform(scrollYProgress, [0, 0.4], [1, 0.9]);
+    const opacityScroll = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
 
     useEffect(() => {
         let isMobile = window.innerWidth < 768; // Initial check
@@ -109,6 +110,20 @@ export default function Hero() {
                     transition={{ duration: 1, delay: 0.2 }}
                 >
                     <h1 className={styles.slogan}>MASŁO. Z MASŁEM.<br /> NA MAŚLE.</h1>
+                </motion.div>
+
+                <motion.div
+                    className={styles.scrollIndicator}
+                    style={{ opacity: opacityScroll }}
+                >
+                    <span className={styles.scrollText}>Przewiń, aby odkryć</span>
+                    <div className={styles.scrollIcon}>
+                        <motion.div
+                            className={styles.scrollDot}
+                            animate={{ y: [0, 12, 0] }}
+                            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                        />
+                    </div>
                 </motion.div>
             </div>
         </div>
