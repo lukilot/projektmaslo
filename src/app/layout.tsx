@@ -38,10 +38,7 @@ export const metadata: Metadata = {
     description: 'Domowe wypieki i słodkie stoły.',
     images: ['/images/sernik.png'],
   },
-  icons: {
-    icon: '/icon.png',
-    apple: '/icon.png',
-  },
+
 }
 
 const jsonLd = {
