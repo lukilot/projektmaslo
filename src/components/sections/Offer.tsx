@@ -8,7 +8,7 @@ const mainGallery = [
     {
         id: 'sernik',
         name: 'Klasyczne wypieki',
-        description: 'sernik baskijski / sernik z&nbsp;białej czekolady / brownie / miodownik / karpatka / napoleonka',
+        description: 'sernik baskijski / sernik z\u00A0białej czekolady / brownie / miodownik / karpatka / napoleonka',
         image: '/images/klasyki_gen.png',
     },
     {
@@ -29,19 +29,19 @@ const specialties = [
     {
         id: 'drozdzowe',
         name: 'Drożdżowe',
-        description: 'Szykowane codziennie z&nbsp;rana by&nbsp;były zawsze miękkie i&nbsp;niesamowicie maślane, a&nbsp;świeża kruszonka to&nbsp;mój sekret.\nmalinianka / cynamonka / jagodzianka (sezonowo)',
+        description: 'Szykowane codziennie z\u00A0rana by\u00A0były zawsze miękkie i\u00A0niesamowicie maślane, a\u00A0świeża kruszonka to\u00A0mój sekret.\nmalinianka / cynamonka / jagodzianka (sezonowo)',
         image: '/images/drozdzowe_gen.png',
     },
     {
         id: 'solo',
         name: 'Solo',
-        description: 'Indywidualne porcje deserów premium, takie jak ptysie, tiramisu i&nbsp;wiele innych.',
+        description: 'Indywidualne porcje deserów premium, takie jak ptysie, tiramisu i\u00A0wiele innych.',
         image: '/images/solo_gen.png',
     },
     {
         id: 'konfitury',
         name: 'Konfitury',
-        description: 'Autorskie konfitury i&nbsp;pasty orzechowe z&nbsp;naturalnych składników:\nkonfitura pomarańcza & wanilia / powidła korzenna śliwka / pasta z&nbsp;prażonych pistacji',
+        description: 'Autorskie konfitury i\u00A0pasty orzechowe z\u00A0naturalnych składników:\nkonfitura pomarańcza & wanilia / powidła korzenna śliwka / pasta z\u00A0prażonych pistacji',
         image: '/images/konfitury_gen.png',
     },
 ];
