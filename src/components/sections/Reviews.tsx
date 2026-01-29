@@ -5,17 +5,17 @@ import styles from './Reviews.module.css';
 const reviews = [
     {
         id: 1,
-        text: "Fantastyczne wypieki, ale przede wszystkim wspaniała osoba, która je tworzy 💛 Jula to osoba pełna pasji, która wkłada całe serce w to, co robi, a efekty są przepyszne!",
+        text: "Fantastyczne wypieki, ale przede wszystkim wspaniała osoba, która je tworzy 💛 Jula to&nbsp;osoba pełna pasji, która wkłada całe serce w&nbsp;to, co&nbsp;robi, a&nbsp;efekty są przepyszne!",
         author: "Anna"
     },
     {
         id: 2,
-        text: "Tu nie ma żadnej lipy, ani gotowców. Tu jest serce w każdym kawałku. Czuć to absolutnie! Wspaniały i odpowiedni człowiek, na odpowiednim miejscu. Brownie mnie rozwaliło na łopatki.",
+        text: "Tu nie&nbsp;ma żadnej lipy, ani gotowców. Tu jest serce w&nbsp;każdym kawałku. Czuć to&nbsp;absolutnie! Wspaniały i&nbsp;odpowiedni człowiek, na&nbsp;odpowiednim miejscu. Brownie mnie rozwaliło na&nbsp;łopatki.",
         author: "Kasia"
     },
     {
         id: 3,
-        text: "Jula to osoba z prawdziwą pasją do cukiernictwa. Jej wypieki są dopracowane w każdym detalu. Czekam z niecierpliwością na Tłusty Czwartek😋",
+        text: "Jula to&nbsp;osoba z&nbsp;prawdziwą pasją do&nbsp;cukiernictwa. Jej wypieki są dopracowane w&nbsp;każdym detalu. Czekam z&nbsp;niecierpliwością na&nbsp;Tłusty Czwartek😋",
         author: "Karolina"
     },
 ];

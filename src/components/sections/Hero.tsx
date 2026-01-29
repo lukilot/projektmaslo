@@ -116,7 +116,7 @@ export default function Hero() {
                     className={styles.scrollIndicator}
                     style={{ opacity: opacityScroll }}
                 >
-                    <span className={styles.scrollText}>Przewiń, aby odkryć</span>
+                    <span className={styles.scrollText}>Przewiń, aby&nbsp;odkryć</span>
                     <div className={styles.scrollIcon}>
                         <motion.div
                             className={styles.scrollDot}

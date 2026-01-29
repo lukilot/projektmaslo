@@ -35,13 +35,13 @@ export default function About() {
                         <span className={styles.titleTagline}>Domowa cukiernia rzemieślnicza.</span>
                     </h2>
                     <p className={styles.text}>
-                        Mam na imię Julka.<br />
-                        Od zawsze piekę z sercem i dbałością o każdy detal.
-                        Projekt Masło powstał z miłości do naturalnych składników, prostych receptur i autentycznego smaku.
+                        Mam na&nbsp;imię Julka.<br />
+                        Od&nbsp;zawsze piekę z&nbsp;sercem i&nbsp;dbałością o&nbsp;każdy detal.
+                        Projekt Masło powstał z&nbsp;miłości do&nbsp;naturalnych składników, prostych receptur i&nbsp;autentycznego smaku.
                     </p>
                     <p className={styles.text}>
-                        Po latach pracy w korporacji postawiłam na marzenia i stworzyłam miejsce, w którym jakość dopełnia się z estetyką.
-                        Dziś piekę na zamówienie dla tych, którzy chcą wracać do smaków dzieciństwa — bez kompromisów i bez skrótów.
+                        Po&nbsp;latach pracy w&nbsp;korporacji postawiłam na&nbsp;marzenia i&nbsp;stworzyłam miejsce, w&nbsp;którym jakość dopełnia się z&nbsp;estetyką.
+                        Dziś piekę na&nbsp;zamówienie dla&nbsp;tych, którzy chcą wracać do&nbsp;smaków dzieciństwa - bez&nbsp;kompromisów i&nbsp;bez&nbsp;skrótów.
                     </p>
                 </motion.div>
             </div>

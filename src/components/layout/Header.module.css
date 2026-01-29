@@ -77,6 +77,21 @@
     color: var(--color-caramel);
 }
 
+.phoneLink {
+    font-weight: 600;
+    color: var(--color-text-main);
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.phoneLink:hover {
+    color: var(--color-caramel);
+}
+
+.mobileActions {
+    display: none;
+}
+
 .mobileMenuBtn {
     display: none;
     background: none;
@@ -108,8 +123,28 @@
         display: none;
     }
 
+    .mobileActions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .mobilePhoneBtn {
+        color: var(--color-text-main);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+    }
+
     .mobileMenuBtn {
         display: block;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 

@@ -8,7 +8,7 @@ const mainGallery = [
     {
         id: 'sernik',
         name: 'Klasyczne wypieki',
-        description: 'sernik baskijski / sernik z białej czekolady / brownie / miodownik / karpatka / napoleonka',
+        description: 'sernik baskijski / sernik z&nbsp;białej czekolady / brownie / miodownik / karpatka / napoleonka',
         image: '/images/klasyki_gen.png',
     },
     {
@@ -29,19 +29,19 @@ const specialties = [
     {
         id: 'drozdzowe',
         name: 'Drożdżowe',
-        description: 'Szykowane codziennie z rana by były zawsze miękkie i niesamowicie maślane, a świeża kruszonka to mój sekret.\nmalinianka / cynamonka / jagodzianka (sezonowo)',
+        description: 'Szykowane codziennie z&nbsp;rana by&nbsp;były zawsze miękkie i&nbsp;niesamowicie maślane, a&nbsp;świeża kruszonka to&nbsp;mój sekret.\nmalinianka / cynamonka / jagodzianka (sezonowo)',
         image: '/images/drozdzowe_gen.png',
     },
     {
         id: 'solo',
         name: 'Solo',
-        description: 'Indywidualne porcje deserów premium, takie jak ptysie, tiramisu i wiele innych.',
+        description: 'Indywidualne porcje deserów premium, takie jak ptysie, tiramisu i&nbsp;wiele innych.',
         image: '/images/solo_gen.png',
     },
     {
         id: 'konfitury',
         name: 'Konfitury',
-        description: 'Autorskie konfitury i pasty orzechowe z naturalnych składników:\nkonfitura pomarańcza & wanilia / powidła korzenna śliwka / pasta z prażonych pistacji',
+        description: 'Autorskie konfitury i&nbsp;pasty orzechowe z&nbsp;naturalnych składników:\nkonfitura pomarańcza & wanilia / powidła korzenna śliwka / pasta z&nbsp;prażonych pistacji',
         image: '/images/konfitury_gen.png',
     },
 ];
@@ -58,7 +58,7 @@ export default function Offer() {
                 >
                     <h2 className={styles.title}>Oferta</h2>
                     <p className={styles.intro}>
-                        Wypieki tworzone z dbałością o smak, jakość i estetykę.<br />
+                        Wypieki tworzone z&nbsp;dbałością o&nbsp;smak, jakość i&nbsp;estetykę.<br />
                         Poznaj moje flagowe desery oraz sezonowe propozycje.
                     </p>
                 </motion.div>
@@ -154,7 +154,7 @@ export default function Offer() {
                     <div className={styles.eventsContent}>
                         <h3 className={styles.eventsTitle}>Słodkie Stoły i Wydarzenia</h3>
                         <p className={styles.eventsText}>
-                            Indywidualne kompozycje wypieków na wesela, urodziny i eventy firmowe - dopasowane do okazji, liczby gości i preferencji smakowych.
+                            Indywidualne kompozycje wypieków na&nbsp;wesela, urodziny i&nbsp;eventy firmowe - dopasowane do&nbsp;okazji, liczby gości i&nbsp;preferencji smakowych.
                         </p>
                         <Button onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}>
                             Skontaktuj się

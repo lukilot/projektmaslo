@@ -36,7 +36,7 @@ export default function Contact() {
     return (
         <section id="kontakt" className={styles.section}>
             <div className={styles.container}>
-                <h2 className={styles.title}>Zamów lub zapytaj o wypieki</h2>
+                <h2 className={styles.title}>Zamów lub zapytaj o&nbsp;wypieki</h2>
 
                 {status === 'success' ? (
                     <div className={styles.success}>
@@ -49,13 +49,18 @@ export default function Contact() {
                     <>
                         {status === 'error' && (
                             <div className={styles.error}>
-                                Coś poszło nie tak. Spróbuj ponownie lub napisz do nas bezpośrednio na Instagramie.
+                                Coś poszło nie&nbsp;tak. Spróbuj ponownie lub napisz do&nbsp;nas bezpośrednio na&nbsp;Instagramie.
                             </div>
                         )}
                         <form className={styles.form} onSubmit={handleSubmit}>
                             <div className={styles.group}>
                                 <label htmlFor="name" className={styles.label}>Imię</label>
                                 <input type="text" id="name" name="name" required className={styles.input} />
+                            </div>
+
+                            <div className={styles.group}>
+                                <label htmlFor="phone" className={styles.label}>Numer telefonu (opcjonalnie)</label>
+                                <input type="tel" id="phone" name="phone" className={styles.input} />
                             </div>
 
                             <div className={styles.group}>
@@ -83,7 +88,7 @@ export default function Contact() {
                             <div className={`${styles.group} ${styles.checkboxGroup}`}>
                                 <input type="checkbox" id="rodo" name="rodo" required className={styles.checkbox} />
                                 <label htmlFor="rodo" className={styles.legal}>
-                                    Wyrażam zgodę na przetwarzanie moich danych osobowych w celu realizacji zamówienia. (RODO)
+                                    Wyrażam zgodę na&nbsp;przetwarzanie moich danych osobowych w&nbsp;celu realizacji zamówienia. (RODO)
                                 </label>
                             </div>
 
