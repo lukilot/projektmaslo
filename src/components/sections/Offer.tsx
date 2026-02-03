@@ -10,18 +10,21 @@ const mainGallery = [
         name: 'Klasyczne wypieki',
         description: 'sernik baskijski / sernik z\u00A0białej czekolady / brownie / miodownik / karpatka / napoleonka',
         image: '/images/klasyki_gen.png',
+        hoverImage: '/images/miodownik_hover.png',
     },
     {
         id: 'tarty-sezonowe',
-        name: 'Tarty sezonowe',
+        name: 'Sezonowe tarty',
         description: 'cytryna / pistacja / biała czekolada / orzech laskowy',
         image: '/images/tarty_gen.png',
+        hoverImage: '/images/tart_hover.png',
     },
     {
         id: 'bezy',
         name: 'Bezy',
         description: 'klasyczna / pistacjowa',
         image: '/images/beza_gen.png',
+        hoverImage: '/images/pistachio_meringue_hover.png',
     },
 ];
 
@@ -161,6 +164,15 @@ export default function Offer() {
                                         className={styles.image}
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                     />
+                                    {(item as any).hoverImage && (
+                                        <Image
+                                            src={(item as any).hoverImage}
+                                            alt={`${item.name} - detale`}
+                                            fill
+                                            className={`${styles.image} ${styles.hoverImage}`}
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                        />
+                                    )}
                                 </div>
                                 <h3 className={styles.cardTitle}>{item.name}</h3>
                                 <p className={styles.cardDesc}>{item.description}</p>

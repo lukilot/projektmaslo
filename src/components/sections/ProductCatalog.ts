@@ -29,7 +29,7 @@ export const PRODUCT_CATALOG: ProductCategory[] = [
         ]
     },
     {
-        category: 'Tarty sezonowe',
+        category: 'Sezonowe tarty',
         items: [
             { name: 'Cytryna', sizes: ['Ø 24 cm', 'Ø 26 cm', 'Ø 28 cm'] },
             { name: 'Pistacja', sizes: ['Ø 24 cm', 'Ø 26 cm', 'Ø 28 cm'] },

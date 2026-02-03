@@ -10,7 +10,9 @@ echo "2. Git Add:" >> deploy_log.txt
 git add . >> deploy_log.txt 2>&1
 
 echo "3. Git Commit:" >> deploy_log.txt
-git commit -m "Update Valentine's Offer and Order Builder" >> deploy_log.txt 2>&1
+COMMIT_MSG="${1:-Update content}"
+echo "3. Git Commit: $COMMIT_MSG" >> deploy_log.txt
+git commit -m "$COMMIT_MSG" >> deploy_log.txt 2>&1
 
 echo "4. Git Push:" >> deploy_log.txt
 git push >> deploy_log.txt 2>&1
