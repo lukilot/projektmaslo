@@ -44,7 +44,7 @@ const valentinesOffer = [
         id: 'red-velvet-cake',
         name: 'Serce Red Velvet',
         description: 'Wyjątkowe ciasto w kształcie serca. Warstwy czerwonego biszkoptu przełożone delikatnym kremem.',
-        image: '/images/red_velvet_heart_new.jpg', // Converted flower shape to heart shape
+        image: '/images/red_velvet_heart_new.png', // Converted flower shape to heart shape
         options: ['Ø ~20 cm']
     }
 ];
