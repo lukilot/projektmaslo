@@ -28,30 +28,6 @@ const mainGallery = [
     },
 ];
 
-const valentinesOffer = [
-    {
-        id: 'red-velvet-muffins',
-        name: 'Muffiny Red Velvet',
-        description: 'Wilgotne babeczki z aksamitnym kremem śmietankowym i kruszonką Red Velvet.',
-        image: '/images/valentines_muffins_final.jpg',
-        options: ['Box 4 szt.', 'Box 6 szt.', 'Box 8 szt.']
-    },
-    {
-        id: 'red-velvet-cookies',
-        name: 'Ciastka Red Velvet',
-        description: 'Kruche z zewnątrz, miękkie w środku ciastka w kolorze głębokiej czerwieni z kawałkami białej czekolady.',
-        image: '/images/valentines_cookies_final.jpg',
-        options: ['5 szt.', '10 szt.', '15 szt.']
-    },
-    {
-        id: 'red-velvet-cake',
-        name: 'Serce Red Velvet',
-        description: 'Wyjątkowe ciasto w kształcie serca. Warstwy czerwonego biszkoptu przełożone delikatnym kremem.',
-        image: '/images/red_velvet_heart_new.png', // Converted flower shape to heart shape
-        options: ['Ø ~20 cm']
-    }
-];
-
 const specialties = [
     {
         id: 'drozdzowe',
@@ -90,55 +66,6 @@ export default function Offer() {
                     </p>
                 </motion.div>
 
-            </div>
-
-            {/* Valentine's Offer Section - Full Width */}
-            <div className={styles.seasonalContainer}>
-                <div className={styles.container}>
-                    <motion.div
-                        className={styles.seasonalHeader}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        <h3 className={styles.seasonalTitle}>Walentynkowa oferta</h3>
-                        <p className={styles.seasonalSubtitle}>
-                            Limitowana oferta wypieków Red Velvet, stworzona, by dzielić się słodyczą z tymi, których kochasz.
-                        </p>
-                    </motion.div>
-
-                    <div className={styles.seasonalGrid}>
-                        {valentinesOffer.map((item: { id: string; name: string; description: string; image: string; options: string[] }, index: number) => (
-                            <motion.div
-                                key={item.id}
-                                className={styles.seasonalCard}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                            >
-                                <div className={styles.seasonalImageWrapper}>
-                                    <Image
-                                        src={item.image}
-                                        alt={item.name}
-                                        fill
-                                        className={styles.seasonalImage}
-                                        sizes="(max-width: 768px) 100vw, 33vw"
-                                    />
-                                </div>
-                                <div className={styles.seasonalCardContent}>
-                                    <h3 className={styles.seasonalCardTitle}>{item.name}</h3>
-                                    <p className={styles.seasonalCardDesc}>{item.description}</p>
-                                    <div className={styles.seasonalOptions}>
-                                        {item.options.map((opt: string) => (
-                                            <span key={opt} className={styles.seasonalOption}>{opt}</span>
-                                        ))}
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
             </div>
 
             <div className={styles.container}>

@@ -10,14 +10,6 @@ export interface ProductCategory {
 
 export const PRODUCT_CATALOG: ProductCategory[] = [
     {
-        category: 'Walentynki 💛',
-        items: [
-            { name: 'Muffiny Red Velvet', sizes: ['Box 4 szt.', 'Box 6 szt.', 'Box 8 szt.'] },
-            { name: 'Ciastka Red Velvet', sizes: ['5 szt.', '10 szt.', '15 szt.'] },
-            { name: 'Ciasto Serce Red Velvet', sizes: ['Ø 20 cm'] }
-        ]
-    },
-    {
         category: 'Klasyczne wypieki',
         items: [
             { name: 'Sernik baskijski', sizes: ['Ø 24 cm', 'Ø 26 cm', 'Ø 28 cm'] },
