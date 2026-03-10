@@ -1,6 +1,7 @@
 'use client';
 import { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useSpring, useMotionValueEvent } from 'framer-motion';
+import Button from '../ui/Button';
 import styles from './Hero.module.css';
 
 const frameCount = 192;
@@ -110,6 +111,13 @@ export default function Hero() {
                     transition={{ duration: 1, delay: 0.2 }}
                 >
                     <h1 className={styles.slogan}>MASŁO.<br /> Z MASŁEM.<br /> NA MAŚLE.</h1>
+                    <div style={{ marginTop: '2.5rem' }}>
+                        <Button
+                            onClick={() => document.getElementById('oferta-wielkanocna')?.scrollIntoView({ behavior: 'smooth' })}
+                        >
+                            Odkryj Ofertę Wielkanocną
+                        </Button>
+                    </div>
                 </motion.div>
 
                 <motion.div

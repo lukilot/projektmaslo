@@ -1,5 +1,5 @@
 --- START DEPLOY ---
-Timestamp: Sun Feb 22 10:37:23 CET 2026
+Timestamp: Tue Mar 10 20:19:31 CET 2026
 PWD: /Users/lukilot/Documents/AI/Projekt Masło/Website Projekt Masło
 1. Git Status:
 On branch main
@@ -9,9 +9,21 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   deploy_log.txt
+	modified:   src/components/sections/Contact.module.css
+	modified:   src/components/sections/Contact.tsx
+	modified:   src/components/sections/Hero.tsx
 	modified:   src/components/sections/Offer.module.css
 	modified:   src/components/sections/Offer.tsx
 	modified:   src/components/sections/ProductCatalog.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	public/images/easter_babka_cytrynowa.png
+	public/images/easter_babka_piaskowa.png
+	public/images/easter_konfitury.png
+	public/images/easter_mazurek_klasyczny.png
+	public/images/easter_mazurek_pistachio.png
+	public/images/easter_sernik_baskijski.png
 
 no changes added to commit (use "git add" and/or "git commit -a")
 2. Git Add:

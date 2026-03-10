@@ -16,6 +16,9 @@ export default function Contact() {
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const [scrolledToForm, setScrolledToForm] = useState(false);
 
+    // Delivery method state
+    const [deliveryMethod, setDeliveryMethod] = useState<'pickup' | 'delivery'>('pickup');
+
     // Order Builder State
     const [orderItems, setOrderItems] = useState<OrderItem[]>([]);
 
@@ -24,6 +27,8 @@ export default function Contact() {
     const [selectedProduct, setSelectedProduct] = useState<string>('');
     const [selectedSize, setSelectedSize] = useState<string>('');
     const [quantity, setQuantity] = useState<number>(1);
+
+    const isEasterPeriod = new Date() <= new Date('2026-03-31T23:59:59');
 
     const activeCategory = PRODUCT_CATALOG.find(c => c.category === selectedCategory);
     const activeProduct = activeCategory?.items.find(p => p.name === selectedProduct);
@@ -126,7 +131,7 @@ export default function Contact() {
                             </div>
 
                             <div className={styles.group}>
-                                <label htmlFor="date" className={styles.label}>Data odbioru</label>
+                                <label htmlFor="date" className={styles.label}>Data odbioru / dostawy</label>
                                 <input
                                     type="date"
                                     id="date"
@@ -136,6 +141,63 @@ export default function Contact() {
                                     min={new Date().toISOString().split('T')[0]}
                                 />
                             </div>
+
+                            <div className={styles.group}>
+                                <label className={styles.label}>Metoda realizacji</label>
+                                <div className={styles.radioGroup}>
+                                    <label className={styles.radioLabel}>
+                                        <input
+                                            type="radio"
+                                            name="delivery_method"
+                                            value="pickup"
+                                            checked={deliveryMethod === 'pickup'}
+                                            onChange={() => setDeliveryMethod('pickup')}
+                                            className={styles.radioInput}
+                                        />
+                                        Odbiór osobisty (Spacerowa 40, Józefosław)
+                                    </label>
+                                    <label className={styles.radioLabel}>
+                                        <input
+                                            type="radio"
+                                            name="delivery_method"
+                                            value="delivery"
+                                            checked={deliveryMethod === 'delivery'}
+                                            onChange={() => setDeliveryMethod('delivery')}
+                                            className={styles.radioInput}
+                                        />
+                                        Dostawa (Warszawa, Piaseczno, Józefosław)
+                                    </label>
+                                </div>
+                            </div>
+
+                            {deliveryMethod === 'delivery' && (
+                                <div className={styles.addressFields}>
+                                    <div className={styles.group}>
+                                        <label htmlFor="street" className={styles.label}>Ulica</label>
+                                        <input type="text" id="street" name="street" required className={styles.input} />
+                                    </div>
+                                    <div className={styles.flexRow}>
+                                        <div className={styles.group} style={{ flex: 1 }}>
+                                            <label htmlFor="building" className={styles.label}>Nr budynku</label>
+                                            <input type="text" id="building" name="building" required className={styles.input} />
+                                        </div>
+                                        <div className={styles.group} style={{ flex: 1 }}>
+                                            <label htmlFor="flat" className={styles.label}>Nr lokalu (opcjonalnie)</label>
+                                            <input type="text" id="flat" name="flat" className={styles.input} />
+                                        </div>
+                                    </div>
+                                    <div className={styles.flexRow}>
+                                        <div className={styles.group} style={{ flex: 1 }}>
+                                            <label htmlFor="postal" className={styles.label}>Kod pocztowy</label>
+                                            <input type="text" id="postal" name="postal" required className={styles.input} />
+                                        </div>
+                                        <div className={styles.group} style={{ flex: 2 }}>
+                                            <label htmlFor="city" className={styles.label}>Miasto</label>
+                                            <input type="text" id="city" name="city" required className={styles.input} />
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
 
                             {/* ORDER BUILDER SECTION */}
                             <div className={styles.orderBuilder}>
@@ -154,9 +216,18 @@ export default function Contact() {
                                             }}
                                         >
                                             <option value="">Wybierz...</option>
-                                            {PRODUCT_CATALOG.map(cat => (
-                                                <option key={cat.category} value={cat.category}>{cat.category}</option>
-                                            ))}
+                                            {PRODUCT_CATALOG.map(cat => {
+                                                const isDisabled = isEasterPeriod && !cat.isEaster;
+                                                return (
+                                                    <option
+                                                        key={cat.category}
+                                                        value={cat.category}
+                                                        disabled={isDisabled}
+                                                    >
+                                                        {cat.category} {isDisabled ? '(Dostępne po 1 kwietnia)' : ''}
+                                                    </option>
+                                                );
+                                            })}
                                         </select>
                                     </div>
 

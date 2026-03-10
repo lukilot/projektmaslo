@@ -62,6 +62,41 @@
     margin-top: 0.25rem;
 }
 
+.radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    color: var(--color-text-main);
+    cursor: pointer;
+}
+
+.radioInput {
+    cursor: pointer;
+    width: 1.125rem;
+    height: 1.125rem;
+    accent-color: var(--color-caramel);
+}
+
+.addressFields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #faf9f6;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border-light);
+    margin-top: 0.5rem;
+}
+
+
 .legal {
     font-size: 0.875rem;
     color: var(--color-cocoa-soft);

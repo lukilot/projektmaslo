@@ -89,6 +89,16 @@
     letter-spacing: -0.02em;
 }
 
+.cardSizeLabel {
+    display: block;
+    margin-top: 0.25rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-cocoa-soft);
+    letter-spacing: normal;
+}
+
 .cardDesc {
     color: var(--color-cocoa-soft);
     line-height: 1.6;
@@ -118,6 +128,24 @@
     text-transform: uppercase;
     letter-spacing: 0.15em;
 }
+
+.unavailableNotice {
+    background-color: var(--color-butter-beige);
+    color: var(--color-cocoa-soft);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 auto 3rem;
+    max-width: 800px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.unavailableNotice strong {
+    color: var(--color-caramel);
+    font-weight: 600;
+}
+
 
 .sizesFlex {
     display: flex;
