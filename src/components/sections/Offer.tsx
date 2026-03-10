@@ -10,41 +10,41 @@ const easterGallery = [
         name: 'Mazurek pistacjowy',
         sizeLabel: '(Ø 24 cm)',
         description: 'kruche maślane ciasto | krem pistacjowy z pastą 100% pistacji | konfitura malinowa',
-        image: '/images/easter_mazurek_pistachio.png',
+        image: '/images/easter26_mazurek_pistacjowy.jpeg',
     },
     {
         id: 'easter-sernik',
         name: 'Sernik baskijski',
         sizeLabel: '(Ø 24 cm)',
         description: 'kremowy sernik o karmelizowanej skórce i aksamitnym środku z nutą prawdziwej wanilii',
-        image: '/images/easter_sernik_baskijski.png',
+        image: '/images/easter26_sernik_baskijski.jpeg',
     },
     {
         id: 'easter-babka-cytrynowa',
         name: 'Babka cytrynowa z makiem',
         sizeLabel: '(Ø 24 cm)',
         description: 'puszysta maślana babka cytrynowa | mak | lukier cytrynowy',
-        image: '/images/easter_babka_cytrynowa.png',
+        image: '/images/easter26_babka_cytrynowa.jpeg',
     },
     {
         id: 'easter-babka-piaskowa',
         name: 'Babka piaskowa z pomarańczą',
         sizeLabel: '(Ø 24 cm)',
         description: 'delikatna maślana babka o sypkiej strukturze | pomarańcza | lukier pomarańczowy',
-        image: '/images/easter_babka_piaskowa.png',
+        image: '/images/easter26_babka_piaskowa.jpeg',
     },
     {
         id: 'easter-mazurek-klasyczny',
         name: 'Mazurek klasyczny',
         sizeLabel: '(Ø 24 cm)',
         description: 'kruche maślane ciasto | kajmak | gorzka czekolada',
-        image: '/images/easter_mazurek_klasyczny.png',
+        image: '/images/easter26_mazurek_klasyczny.jpeg',
     },
     {
         id: 'easter-konfitury',
         name: 'Konfitury / pasty',
         description: 'Konfitura pomarańczowa (200ml)\nKonfitura malinowa (200ml)\nPasta z prażonych pistacji (100g)\nPasta z orzechów laskowych (100g)',
-        image: '/images/easter_konfitury.png',
+        image: '/images/easter26_konfitury.jpeg',
     }
 ];
 
@@ -116,6 +116,16 @@ export default function Offer() {
                 {/* Easter Offer Section */}
                 <div id="oferta-wielkanocna" className={styles.categoryBlock} style={{ marginBottom: '8rem' }}>
                     <h3 className={styles.groupTitle} style={{ color: 'var(--color-caramel)', marginBottom: '3rem' }}>Oferta Wielkanocna 2026</h3>
+
+                    <div className={styles.unavailableNotice}>
+                        <strong>* Uwaga:</strong> Oferta Wielkanocna dostępna jest wyłącznie do 31 marca.
+                        <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+                            <Button onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}>
+                                Złóż zamówienie
+                            </Button>
+                        </div>
+                    </div>
+
                     <div className={styles.grid}>
                         {easterGallery.map((item, index) => (
                             <motion.div
@@ -149,11 +159,6 @@ export default function Offer() {
                 <div className={styles.categoryBlock}>
                     <h3 className={styles.groupTitle} style={{ marginBottom: '2rem' }}>Oferta Standardowa</h3>
 
-                    <div className={styles.unavailableNotice}>
-                        <strong>* Uwaga:</strong> Do 31 marca realizuję wyłącznie zamówienia z <strong>Oferty Wielkanocnej</strong>.<br />
-                        Standardowe wypieki będą ponownie dostępne do zamówienia po 1 kwietnia.
-                    </div>
-
                     <div className={styles.grid}>
                         {mainGallery.map((item, index) => (
                             <motion.div
@@ -172,9 +177,9 @@ export default function Offer() {
                                         className={styles.image}
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                     />
-                                    {(item as any).hoverImage && (
+                                    {(item as { hoverImage?: string }).hoverImage && (
                                         <Image
-                                            src={(item as any).hoverImage}
+                                            src={(item as { hoverImage?: string }).hoverImage!}
                                             alt={`${item.name} - detale`}
                                             fill
                                             className={`${styles.image} ${styles.hoverImage}`}

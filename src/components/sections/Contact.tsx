@@ -102,7 +102,7 @@ export default function Contact() {
 
                 {status === 'success' ? (
                     <div className={styles.success}>
-                        <p>Dziękujemy za wiadomość! Odezwiemy się wkrótce.</p>
+                        <p>Dziękuję za wiadomość! Wrócę jak najszybciej ze szczegółami.</p>
                         <Button onClick={() => setStatus('idle')} variant="outline" style={{ marginTop: '1rem' }}>
                             Wyślij kolejną
                         </Button>
