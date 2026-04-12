@@ -113,9 +113,9 @@ export default function Hero() {
                     <h1 className={styles.slogan}>MASŁO.<br /> Z MASŁEM.<br /> NA MAŚLE.</h1>
                     <div style={{ marginTop: '2.5rem' }}>
                         <Button
-                            onClick={() => document.getElementById('oferta-wielkanocna')?.scrollIntoView({ behavior: 'smooth' })}
+                            onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
                         >
-                            Odkryj Ofertę Wielkanocną
+                            Odkryj Ofertę
                         </Button>
                     </div>
                 </motion.div>

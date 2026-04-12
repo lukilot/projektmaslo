@@ -28,8 +28,6 @@ export default function Contact() {
     const [selectedSize, setSelectedSize] = useState<string>('');
     const [quantity, setQuantity] = useState<number>(1);
 
-    const isEasterPeriod = new Date() <= new Date('2026-03-31T23:59:59');
-
     const activeCategory = PRODUCT_CATALOG.find(c => c.category === selectedCategory);
     const activeProduct = activeCategory?.items.find(p => p.name === selectedProduct);
 
@@ -216,18 +214,14 @@ export default function Contact() {
                                             }}
                                         >
                                             <option value="">Wybierz...</option>
-                                            {PRODUCT_CATALOG.map(cat => {
-                                                const isDisabled = isEasterPeriod && !cat.isEaster;
-                                                return (
-                                                    <option
-                                                        key={cat.category}
-                                                        value={cat.category}
-                                                        disabled={isDisabled}
-                                                    >
-                                                        {cat.category} {isDisabled ? '(Dostępne po 1 kwietnia)' : ''}
-                                                    </option>
-                                                );
-                                            })}
+                                            {PRODUCT_CATALOG.map(cat => (
+                                                <option
+                                                    key={cat.category}
+                                                    value={cat.category}
+                                                >
+                                                    {cat.category}
+                                                </option>
+                                            ))}
                                         </select>
                                     </div>
 

@@ -6,25 +6,9 @@ export interface ProductOption {
 export interface ProductCategory {
     category: string;
     items: ProductOption[];
-    isEaster?: boolean;
 }
 
 export const PRODUCT_CATALOG: ProductCategory[] = [
-    {
-        category: 'Oferta Wielkanocna 2026',
-        isEaster: true,
-        items: [
-            { name: 'Mazurek pistacjowy', sizes: ['Ø 24 cm'] },
-            { name: 'Sernik baskijski', sizes: ['Ø 24 cm'] },
-            { name: 'Babka cytrynowa z makiem', sizes: ['Ø 24 cm'] },
-            { name: 'Babka piaskowa z pomarańczą', sizes: ['Ø 24 cm'] },
-            { name: 'Mazurek klasyczny', sizes: ['Ø 24 cm'] },
-            { name: 'Konfitura z pomarańczy', sizes: ['200 ml'] },
-            { name: 'Konfitura z malin', sizes: ['200 ml'] },
-            { name: 'Pasta z prażonych pistacji', sizes: ['100 g'] },
-            { name: 'Pasta z prażonych orzechów laskowych', sizes: ['100 g'] }
-        ]
-    },
     {
         category: 'Klasyczne wypieki',
         items: [

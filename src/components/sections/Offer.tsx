@@ -4,50 +4,6 @@ import { motion } from 'framer-motion';
 import Button from '../ui/Button'; // Assuming I reuse the button I made in plan step
 import styles from './Offer.module.css';
 
-const easterGallery = [
-    {
-        id: 'easter-mazurek-pistachio',
-        name: 'Mazurek pistacjowy',
-        sizeLabel: '(Ø 24 cm)',
-        description: 'kruche maślane ciasto | krem pistacjowy z pastą 100% pistacji | konfitura malinowa',
-        image: '/images/easter26_mazurek_pistacjowy.jpeg',
-    },
-    {
-        id: 'easter-sernik',
-        name: 'Sernik baskijski',
-        sizeLabel: '(Ø 24 cm)',
-        description: 'kremowy sernik o karmelizowanej skórce i aksamitnym środku z nutą prawdziwej wanilii',
-        image: '/images/easter26_sernik_baskijski.jpeg',
-    },
-    {
-        id: 'easter-babka-cytrynowa',
-        name: 'Babka cytrynowa z makiem',
-        sizeLabel: '(Ø 24 cm)',
-        description: 'puszysta maślana babka cytrynowa | mak | lukier cytrynowy',
-        image: '/images/easter26_babka_cytrynowa.jpeg',
-    },
-    {
-        id: 'easter-babka-piaskowa',
-        name: 'Babka piaskowa z pomarańczą',
-        sizeLabel: '(Ø 24 cm)',
-        description: 'delikatna maślana babka o sypkiej strukturze | pomarańcza | lukier pomarańczowy',
-        image: '/images/easter26_babka_piaskowa.jpeg',
-    },
-    {
-        id: 'easter-mazurek-klasyczny',
-        name: 'Mazurek klasyczny',
-        sizeLabel: '(Ø 24 cm)',
-        description: 'kruche maślane ciasto | kajmak | gorzka czekolada',
-        image: '/images/easter26_mazurek_klasyczny.jpeg',
-    },
-    {
-        id: 'easter-konfitury',
-        name: 'Konfitury / pasty',
-        description: 'Konfitura pomarańczowa (200ml)\nKonfitura malinowa (200ml)\nPasta z prażonych pistacji (100g)\nPasta z orzechów laskowych (100g)',
-        image: '/images/easter26_konfitury.jpeg',
-    }
-];
-
 const mainGallery = [
     {
         id: 'sernik',
@@ -113,48 +69,6 @@ export default function Offer() {
             </div>
 
             <div className={styles.container}>
-                {/* Easter Offer Section */}
-                <div id="oferta-wielkanocna" className={styles.categoryBlock} style={{ marginBottom: '8rem' }}>
-                    <h3 className={styles.groupTitle} style={{ color: 'var(--color-caramel)', marginBottom: '3rem' }}>Oferta Wielkanocna 2026</h3>
-
-                    <div className={styles.unavailableNotice}>
-                        <strong>* Uwaga:</strong> Oferta Wielkanocna dostępna jest wyłącznie do 31 marca.
-                        <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
-                            <Button onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}>
-                                Złóż zamówienie
-                            </Button>
-                        </div>
-                    </div>
-
-                    <div className={styles.grid}>
-                        {easterGallery.map((item, index) => (
-                            <motion.div
-                                key={item.id}
-                                className={styles.card}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                            >
-                                <div className={styles.imageWrapper}>
-                                    <Image
-                                        src={item.image}
-                                        alt={item.name}
-                                        fill
-                                        className={styles.image}
-                                        sizes="(max-width: 768px) 100vw, 33vw"
-                                    />
-                                </div>
-                                <h3 className={styles.cardTitle}>
-                                    {item.name}
-                                    {item.sizeLabel && <span className={styles.cardSizeLabel}>{item.sizeLabel}</span>}
-                                </h3>
-                                <p className={styles.cardDesc}>{item.description}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-
                 {/* Main Gallery Section list start below */}
                 <div className={styles.categoryBlock}>
                     <h3 className={styles.groupTitle} style={{ marginBottom: '2rem' }}>Oferta Standardowa</h3>
